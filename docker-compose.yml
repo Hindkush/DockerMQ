@@ -1,0 +1,11 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management  # Correct image name
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:  # Correct spelling of 'environment'
+      RABBITMQ_DEFAULT_USER: "user"  # Indentation is important here
+      RABBITMQ_DEFAULT_PASS: "password"
